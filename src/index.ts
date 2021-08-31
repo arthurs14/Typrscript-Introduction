@@ -63,3 +63,47 @@ const user: User = {
   id: 1,
   name: 'John',
 };
+
+// Type Assertion
+let cid: any = 1;
+
+//let customerId = <number>cid;
+let customerId = cid as number;
+
+// Functions
+function addNum(x: number, y: number):number {
+  return x + y;
+}
+
+console.log(`addNum Function:`)
+console.log(addNum(1,2));
+
+// Return nothing -> void
+function log(message: string | number): void {
+  console.log(message);
+}
+
+console.log('Log Function:');
+log('Hello There');
+log('22');
+
+// Interfaces
+// Cannot use with primitives or unions
+interface UserInterface {
+  readonly id: number,  // assign to not be changed
+  name: string,
+  age?: number,         // optional
+};
+
+const user1: UserInterface = {
+  id: 1,
+  name: 'Timmy',
+};
+
+interface MathFunc {
+  (x: number, y: number): number;
+}
+
+// Using interface with a function
+const add: MathFunc = (x: number, y: number): number => x + y;
+const subtract: MathFunc = (x: number, y: number): number => x - y;

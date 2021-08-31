@@ -52,3 +52,28 @@ const user = {
     id: 1,
     name: 'John',
 };
+// Type Assertion
+let cid = 1;
+//let customerId = <number>cid;
+let customerId = cid;
+// Functions
+function addNum(x, y) {
+    return x + y;
+}
+console.log(`addNum Function:`);
+console.log(addNum(1, 2));
+// Return nothing -> void
+function log(message) {
+    console.log(message);
+}
+console.log('Log Function:');
+log('Hello There');
+log('22');
+;
+const user1 = {
+    id: 1,
+    name: 'Timmy',
+};
+// Using interface with a function
+const add = (x, y) => x + y;
+const subtract = (x, y) => x - y;
