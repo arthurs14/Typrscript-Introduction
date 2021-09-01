@@ -116,6 +116,7 @@ interface PersonInterface {
 }
 
 // Classes
+// Parent Class
 class Person implements PersonInterface {
   // public - changeable attributes
   id: number
@@ -137,7 +138,19 @@ class Person implements PersonInterface {
   }
 }
 
+// Subclass
+class Member extends Person {
+  position: string
+
+  constructor(id: number, name: string, position: string) {
+    super(id, name);
+    this.position = position;
+  }
+}
+
 const jisoo = new Person(26, 'Jisoo Kim');
 const jennie = new Person(25, 'Jennie Kim');
+const mem = new Member(24, 'Rose Park', 'main vocal');
 
-console.log(jisoo.register());
+console.log(mem.name);
+console.log(mem.register());

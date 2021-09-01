@@ -78,6 +78,7 @@ const user1 = {
 const add = (x, y) => x + y;
 const subtract = (x, y) => x - y;
 // Classes
+// Parent Class
 class Person {
     // private to this class
     // private id: number
@@ -91,6 +92,15 @@ class Person {
         return `${this.name} is now registered.`;
     }
 }
+// Subclass
+class Member extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
 const jisoo = new Person(26, 'Jisoo Kim');
 const jennie = new Person(25, 'Jennie Kim');
-console.log(jisoo.register());
+const mem = new Member(24, 'Rose Park', 'main vocal');
+console.log(mem.name);
+console.log(mem.register());
