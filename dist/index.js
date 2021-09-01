@@ -79,12 +79,16 @@ const add = (x, y) => x + y;
 const subtract = (x, y) => x - y;
 // Classes
 class Person {
+    // protected to this class and any sub class
+    // protected id: number
     constructor(id, name) {
         this.id = id;
         this.name = name;
     }
+    register() {
+        return `${this.name} is now registered.`;
+    }
 }
 const jisoo = new Person(26, 'Jisoo Kim');
 const jennie = new Person(25, 'Jennie Kim');
-jisoo.id = 27;
-console.log(jisoo);
+console.log(jisoo.register());
