@@ -154,3 +154,14 @@ const mem = new Member(24, 'Rose Park', 'main vocal');
 
 console.log(mem.name);
 console.log(mem.register());
+
+// Generics - used to build reusable components
+// placeholder of the type
+function getArray<T>(items: T[]): T[] {
+  return new Array().concat(items)
+}
+
+let numArr = getArray<number>([1,2,3,4]);
+let strArr = getArray<string>(['jisoo', 'jennie', 'rose', 'lisa']);
+
+numArr.push(5);

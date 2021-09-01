@@ -104,3 +104,11 @@ const jennie = new Person(25, 'Jennie Kim');
 const mem = new Member(24, 'Rose Park', 'main vocal');
 console.log(mem.name);
 console.log(mem.register());
+// Generics - used to build reusable components
+// placeholder of the type
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArr = getArray([1, 2, 3, 4]);
+let strArr = getArray(['jisoo', 'jennie', 'rose', 'lisa']);
+numArr.push(5);
