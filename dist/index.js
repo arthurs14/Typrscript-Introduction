@@ -79,6 +79,8 @@ const add = (x, y) => x + y;
 const subtract = (x, y) => x - y;
 // Classes
 class Person {
+    // private to this class
+    // private id: number
     // protected to this class and any sub class
     // protected id: number
     constructor(id, name) {

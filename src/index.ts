@@ -108,14 +108,21 @@ interface MathFunc {
 const add: MathFunc = (x: number, y: number): number => x + y;
 const subtract: MathFunc = (x: number, y: number): number => x - y;
 
+// Using interface with a class
+interface PersonInterface {
+  id: number
+  name: string
+  register(): string
+}
+
 // Classes
-class Person {
+class Person implements PersonInterface {
   // public - changeable attributes
-  // id: number
+  id: number
   name: string
 
   // private to this class
-  private id: number
+  // private id: number
 
   // protected to this class and any sub class
   // protected id: number
