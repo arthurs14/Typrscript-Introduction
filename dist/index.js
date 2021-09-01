@@ -86,4 +86,5 @@ class Person {
 }
 const jisoo = new Person(26, 'Jisoo Kim');
 const jennie = new Person(25, 'Jennie Kim');
-console.log(jisoo, jennie);
+jisoo.id = 27;
+console.log(jisoo);

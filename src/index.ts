@@ -110,8 +110,15 @@ const subtract: MathFunc = (x: number, y: number): number => x - y;
 
 // Classes
 class Person {
-  id: number
+  // public - changeable attributes
+  // id: number
   name: string
+
+  // private to this class
+  private id: number
+
+  // protected to this class and any sub class
+  // protected id: number
 
   constructor(id: number, name: string) {
     this.id = id;
@@ -122,4 +129,4 @@ class Person {
 const jisoo = new Person(26, 'Jisoo Kim');
 const jennie = new Person(25, 'Jennie Kim');
 
-console.log(jisoo, jennie);
+console.log(jisoo.id);
