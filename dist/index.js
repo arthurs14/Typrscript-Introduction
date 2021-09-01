@@ -77,3 +77,13 @@ const user1 = {
 // Using interface with a function
 const add = (x, y) => x + y;
 const subtract = (x, y) => x - y;
+// Classes
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+const jisoo = new Person(26, 'Jisoo Kim');
+const jennie = new Person(25, 'Jennie Kim');
+console.log(jisoo, jennie);
